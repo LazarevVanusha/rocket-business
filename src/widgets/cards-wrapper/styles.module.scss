@@ -1,0 +1,94 @@
+.wrapper {
+  position: relative;
+  max-width: max-content;
+  margin-inline: auto;
+  padding-inline: 16px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 1280px) {
+    grid-template-columns: minmax(200px, 1fr) 1fr;
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: minmax(0px, 1fr);
+  }
+
+  &__large_cards {
+    order: 1;
+  }
+
+  &__medium_cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    order: 2;
+
+    @media (min-width: 640px) and (max-width: 1280px) {
+      flex-direction: row;
+      order: 3;
+      grid-column: span 2;
+
+    }
+  }
+
+  &__small_cards {
+    order: 3;
+    padding-bottom: 16px;
+
+    @media (min-width: 640px) and (max-width: 1280px) {
+      order: 2;
+    }
+
+    &__container {
+
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+
+
+      @media (max-width: 640px) {
+        display: flex;
+        scroll-behavior: smooth;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 10px;
+        padding-bottom: 20px;
+
+        &>* {
+          flex: 0 0 80%;
+          scroll-snap-align: center;
+        }
+      }
+    }
+
+    &__dots {
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+      display: none;
+
+      @media screen and (max-width: 640px) {
+        display: flex;
+
+      }
+
+      &__btn {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #E6E6E6;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &__active {
+          background-color: #000;
+        }
+      }
+    }
+  }
+}

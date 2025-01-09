@@ -1,0 +1,57 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-height: 645px;
+  padding: 54px 120px;
+  margin-bottom: 64px;
+  box-sizing: border-box;
+  background: #fff;
+
+  @media screen and (max-width: 1024px) {
+    padding: 48px 16px;
+  margin-bottom: 48px;
+
+  }
+
+  &__thumbnail {
+    max-width: 1200px;
+    max-height: 517px;
+    min-height: 208px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__playBtn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 28px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #18C576;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    transition: 0.3s ease;
+
+    &:hover {
+      scale: 1.1;
+      background: #158b56;
+
+    }
+  }
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; 
+}

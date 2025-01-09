@@ -1,0 +1,24 @@
+@mixin cardActions {
+  padding: 0;
+  border: none;
+  background: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+.actions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  top: 10px;
+  right: 10px;
+
+  &__btn {
+    @include cardActions;
+    cursor: pointer;
+  }
+}

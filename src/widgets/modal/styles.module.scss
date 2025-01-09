@@ -1,0 +1,113 @@
+.dialog {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+
+  &::backdrop {
+    background: #bfbfbf;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 32px;
+
+    &__title {
+      font-size: 20px;
+      line-height: 19px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    &__close {
+      color: red;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    // padding-bottom: 24px;
+
+    &__input {
+      height: 34px;
+      background: #fff;
+      border-radius: 5px;
+      color: #444444;
+      border: 1px solid #E6E6E6;
+      padding: 0 12px;
+
+      &:invalid {
+        border-color: red;
+      }
+    }
+
+
+    &__submit {
+      display: flex;
+      justify-content: space-between;
+
+      &__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        &__radio {
+          width: 8px; //слишком мелкий в дизайне
+          height: 8px;
+          appearance: none;
+          background: #fff;
+          border-radius: 2px;
+          border: 1px solid #D1D1D1;
+
+          &:invalid {
+            border-color: red;
+          }
+
+          &:checked {
+            background-color: #18C576;
+            border-color: #18C576;
+          }
+
+          &:focus {
+            outline: none;
+            border-color: #158b56;
+          }
+        }
+
+        &__label {
+          font-size: 8px;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+
+      &__button {
+        height: 32px;
+        padding-inline: 20px;
+        font-size: 12px;
+        border: none;
+        border-radius: 5px;
+        background: #18C576;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          scale: 1.02;
+        }
+        &:active {
+          scale: 0.98;
+        
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.green {
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  padding-block: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: #18C576;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    scale: 1.02;
+  }
+
+  &:active {
+    scale: 0.98;
+  }
+}
