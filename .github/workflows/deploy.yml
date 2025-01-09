@@ -3,10 +3,10 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Запускать при пуше в основную ветку (или измените на вашу)
+      - main  
   pull_request:
     branches:
-      - main  # Также при создании PR в основную ветку
+      - main  
 
 jobs:
   build:
@@ -19,17 +19,17 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  # Укажите версию Node.js
+          node-version: '20'  
 
       - name: Install dependencies
         run: npm install
 
       - name: Build the project with Vite
-        run: npm run build  # Команда для сборки проекта
+        run: npm run build  
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Ветка для деплоя
-          folder: dist      # Папка с готовыми файлами для деплоя
-          token: ${{ secrets.GITHUB_TOKEN }}  # Автоматический токен для аутентификации
+          branch: gh-pages  
+          folder: dist      
+          token: ${{ secrets.GITHUB_TOKEN }}  
