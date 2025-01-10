@@ -166,7 +166,7 @@
   <div class=${u.container} >
     <div id="videoBlock" style='position:relative'>
       <img 
-        src="/img/video-thumbnail.png" 
+        src="img/video-thumbnail.png" 
         alt="Video Thumbnail" 
         class=${u.container__thumbnail}
         id="videoThumbnail" 
