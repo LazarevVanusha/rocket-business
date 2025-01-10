@@ -6,7 +6,7 @@ export function createVideoContainer() {
   <div class=${styles.container} >
     <div id="videoBlock" style='position:relative'>
       <img 
-        src="/img/video-thumbnail.png" 
+        src="img/video-thumbnail.png" 
         alt="Video Thumbnail" 
         class=${styles.container__thumbnail}
         id="videoThumbnail" 
