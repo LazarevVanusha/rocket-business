@@ -8,8 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.body.addEventListener('click', (event) => {
     const button = event.target.closest('button[data-index]');
-    
-    if (button) {
+    if (!button) return;
+
+    const action = button.getAttribute('data-action');
+
+    if (action === 'open-modal') {
       dialog.showModal();
     }
   });
